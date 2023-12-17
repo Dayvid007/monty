@@ -21,7 +21,7 @@ void f_adder(stackman_s **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
 		fclose(bus.document);
 		free(bus.details);
-		free_stack(*head);
+		free_stackover(*head);
 		exit(EXIT_FAILURE);
 	}
 	j = *head;

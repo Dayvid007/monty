@@ -35,7 +35,7 @@ int ex(char *details, stackman_s **stack, unsigned int counter, FILE *document)
 	if (option && option[0] == '#')
 		return (0);
 	bus.argand = strtok(NULL, " \n\t");
-	while (opst[a].operationcode && optionn)
+	while (opst[a].operationcode && option)
 	{
 		if (strcmp(option, opst[a].operationcode) == 0)
 		{	opst[a].f(stack, counter);
@@ -47,7 +47,7 @@ int ex(char *details, stackman_s **stack, unsigned int counter, FILE *document)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, option);
 		fclose(document);
 		free(details);
-		free_stack(*stack);
+		free_stackover(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }

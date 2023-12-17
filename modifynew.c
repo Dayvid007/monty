@@ -23,15 +23,15 @@ void f_moder(stackman_s **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
 		fclose(bus.document);
 		free(bus.details);
-		free_stack(*head);
+		free_stackover(*head);
 		exit(EXIT_FAILURE);
 	}
 	i = *head;
 	if (i->a == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", count);
-		fclose(bus.filed);
-		free(bus.entails);
+		fprintf(stderr, "L%d: division by zero\n", counter);
+		fclose(bus.document);
+		free(bus.details);
 		free_stackover(*head);
 		exit(EXIT_FAILURE);
 	}

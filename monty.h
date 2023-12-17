@@ -71,7 +71,7 @@ void f_swapptr(stackman_s **head, unsigned int counter);
 void f_adder(stackman_s **head, unsigned int counter);
 void f_noper(stackman_s **head, unsigned int counter);
 void f_subptr(stackman_s **head, unsigned int counter);
-void f_divptr(stacked_s **head, unsigned int counter);
+void f_divptr(stackman_s **head, unsigned int counter);
 void f_multi(stackman_s **head, unsigned int counter);
 void f_moder(stackman_s **head, unsigned int counter);
 void f_pcharptr(stackman_s **head, unsigned int counter);
@@ -80,6 +80,6 @@ void f_rotlptr(stackman_s **head, unsigned int counter);
 void f_rots(stackman_s **head, __attribute__((unused)) unsigned int counter);
 void addnodefr(stackman_s **head, int a);
 void addqueueptr(stackman_s **head, int a);
-void f_queuestr(stackman_s **head, unsigned int count);
-void f_stackman(stackman_s **head, unsigned int count);
+void f_queuestr(stackman_s **head, unsigned int counter);
+void f_stackman(stackman_s **head, unsigned int counter);
 #endif

@@ -22,7 +22,7 @@ void f_divptr(stackman_s **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
 		fclose(bus.document);
 		free(bus.details);
-		free_stack(*head);
+		free_stackover(*head);
 		exit(EXIT_FAILURE);
 	}
 	i = *head;
@@ -31,7 +31,7 @@ void f_divptr(stackman_s **head, unsigned int counter)
 		fprintf(stderr, "L%d: division by zero\n", counter);
 		fclose(bus.document);
 		free(bus.details);
-		free_stack(*head);
+		free_stackover(*head);
 		exit(EXIT_FAILURE);
 	}
 	aux = i->present->a / i->a;
